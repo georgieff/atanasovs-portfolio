@@ -1,0 +1,37 @@
+$navigation-height: 60px;
+
+.navigation {
+  height: $navigation-height;
+  margin-top: -$navigation-height;
+  background: $base-alpha-color;
+  z-index: 15;
+
+  ul {
+    @extend %list-reset;
+    font-size: 0;
+
+    > li {
+      display: inline-block;
+      width: 20%;
+      text-align: center;
+    }
+
+    a {
+      @extend h6;
+      display: block;
+      margin: 0;
+      padding: 0;
+      line-height: $navigation-height;
+      color: #7a7a7a;
+
+      &:hover {
+        text-decoration: none;
+        background: darken($base-alpha-color, 10%);
+      }
+
+      &.current {
+        border-bottom: 3px solid $border-color;
+      }
+    }
+  }
+}

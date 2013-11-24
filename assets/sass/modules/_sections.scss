@@ -1,0 +1,67 @@
+$section-padding: 100px;
+$bg-section-height: 590px;
+
+.section {
+  @extend %bs-border-box;
+  @extend %bs-cover;
+  padding: $section-padding 0;
+
+  &.title-container {
+    height: 140px;
+    line-height: 140px;
+    text-align: center;
+  }
+
+  &.banner {
+    height: 460px;
+    background-image: url('../img/banner.png');
+  }
+
+  &.ui-design {
+    height: $bg-section-height;
+    background-image: url('../img/ui-design.png');
+    border: {
+      top: 1px solid $border-color;
+      bottom: 1px solid $border-color;
+    }
+  }
+}
+
+$tile-angle: 60px;
+
+.section-tile {
+  position: relative;
+  width: 400px;
+  height: $bg-section-height + 40;
+  margin: {
+    top: -$section-padding - 20;
+    bottom: -$section-padding - 20;
+  }
+  padding: {
+    top: $section-padding + 20;
+    bottom: $section-padding + 20;
+  }
+  background: #fff;
+
+  &:before {
+    position: absolute;
+    top: 0;
+    left: -$tile-angle;
+    width: 0;
+    height: 0;
+    border-bottom: $bg-section-height + 40 solid transparent;
+    border-right: $tile-angle solid #fff;
+    content: "";
+  }
+
+  &:after {
+    position: absolute;
+    top: 0;
+    right: -$tile-angle;
+    width: 0;
+    height: 0;
+    border-top: $bg-section-height + 40 solid transparent;
+    border-left: $tile-angle solid #fff;
+    content: "";
+  }
+}
