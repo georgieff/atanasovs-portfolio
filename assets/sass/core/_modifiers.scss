@@ -1,19 +1,40 @@
-.mtac {
-  text-align: center;
-}
+#mod {
 
-.mtal {
-  text-align: left;
-}
+  .mtac {
+    text-align: center;
+  }
 
-.mtar {
-  text-align: right;
-}
+  .mtal {
+    text-align: left;
+  }
 
-.mnp {
-  padding: 0;
-}
+  .mtar {
+    text-align: right;
+  }
 
-.mnm {
-  margin: 0;
+  .mnp {
+    padding: 0;
+  }
+
+  .mnm {
+    margin: 0;
+  }
+
+  .mdb {
+    display: block;
+  }
+
+  .mdib {
+    display: inline-block;
+  }
+
+  .mdi {
+    display: inline;
+  }
+
+  @for $i from 1 through 5 {
+    .mmb#{$i} {
+      margin-bottom: 10px*$i;
+    }
+  }
 }

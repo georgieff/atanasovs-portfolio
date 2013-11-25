@@ -29,6 +29,7 @@ $bg-section-height: 590px;
 
 $tile-angle: 60px;
 $tile-offset: 10px;
+$tile-background: #efefef;
 
 .section-tile {
   position: relative;
@@ -42,7 +43,7 @@ $tile-offset: 10px;
     top: $section-padding + $tile-offset;
     bottom: $section-padding + $tile-offset;
   }
-  background: #fff;
+  background: $tile-background;
   transition: margin 0.5s ease;
   -webkit-transform: translateZ(0);
 
@@ -53,7 +54,7 @@ $tile-offset: 10px;
     width: 0;
     height: 0;
     border-bottom: $bg-section-height + $tile-offset*2 solid transparent;
-    border-right: $tile-angle solid #fff;
+    border-right: $tile-angle solid $tile-background;
     content: "";
   }
 
@@ -64,7 +65,7 @@ $tile-offset: 10px;
     width: 0;
     height: 0;
     border-top: $bg-section-height + $tile-offset*2 solid transparent;
-    border-left: $tile-angle solid #fff;
+    border-left: $tile-angle solid $tile-background;
     content: "";
   }
 

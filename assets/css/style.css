@@ -429,7 +429,7 @@ textarea {
   margin-bottom: -110px;
   padding-top: 110px;
   padding-bottom: 110px;
-  background: #fff;
+  background: #efefef;
   transition: margin 0.5s ease;
   -webkit-transform: translateZ(0);
 }
@@ -440,7 +440,7 @@ textarea {
   width: 0;
   height: 0;
   border-bottom: 610px solid transparent;
-  border-right: 60px solid white;
+  border-right: 60px solid #efefef;
   content: "";
 }
 .section-tile:after {
@@ -450,7 +450,7 @@ textarea {
   width: 0;
   height: 0;
   border-top: 610px solid transparent;
-  border-left: 60px solid white;
+  border-left: 60px solid #efefef;
   content: "";
 }
 
@@ -530,22 +530,42 @@ p + .button {
   margin-top: 50px;
 }
 
-.mtac {
+#mod .mtac {
   text-align: center;
 }
-
-.mtal {
+#mod .mtal {
   text-align: left;
 }
-
-.mtar {
+#mod .mtar {
   text-align: right;
 }
-
-.mnp {
+#mod .mnp {
   padding: 0;
 }
-
-.mnm {
+#mod .mnm {
   margin: 0;
+}
+#mod .mdb {
+  display: block;
+}
+#mod .mdib {
+  display: inline-block;
+}
+#mod .mdi {
+  display: inline;
+}
+#mod .mmb1 {
+  margin-bottom: 10px;
+}
+#mod .mmb2 {
+  margin-bottom: 20px;
+}
+#mod .mmb3 {
+  margin-bottom: 30px;
+}
+#mod .mmb4 {
+  margin-bottom: 40px;
+}
+#mod .mmb5 {
+  margin-bottom: 50px;
 }
