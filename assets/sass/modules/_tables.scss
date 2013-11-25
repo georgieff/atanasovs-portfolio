@@ -1,0 +1,28 @@
+table {
+  color: #8e8e8e;
+  font: 500 14px/60px $base-font-family;
+  cellspacing: 0;
+  cellpadding: 0;
+
+
+  tr {
+    background: #fff;
+    border-bottom: 1px solid #eee;
+
+    &:nth-child(even) {
+      background: #fbfbfb;
+    }
+    td:last-child {
+      @extend .mtar;
+    }
+  }
+
+  td {
+    height: 60px;
+    padding: 0 50px;
+  }
+
+  thead tr{
+    background: #ddd;
+  }
+}

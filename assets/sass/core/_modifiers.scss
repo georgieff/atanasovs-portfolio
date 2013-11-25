@@ -37,4 +37,10 @@
       margin-bottom: 10px*$i;
     }
   }
+
+  @for $i from 1 through 5 {
+    .mpb#{$i} {
+      padding-bottom: 10px*$i;
+    }
+  }
 }

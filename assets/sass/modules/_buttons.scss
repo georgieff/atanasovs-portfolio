@@ -8,6 +8,8 @@
   background: #7dd9b3;
   border-radius: 4px;
   box-shadow: 0 2px 0 #82b6a0;
+  transition: background 0.5s ease;
+  -webkit-transform: translateZ(0);
 
   &:hover {
     text-decoration: none;

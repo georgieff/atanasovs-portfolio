@@ -6,6 +6,10 @@ $bg-section-height: 590px;
   @extend %bs-cover;
   padding: $section-padding 0;
 
+  &.light {
+    background: #f8f8f8;
+  }
+
   &.title-container {
     height: 140px;
     line-height: 140px;
@@ -17,19 +21,34 @@ $bg-section-height: 590px;
     background-image: url('../img/banner.png');
   }
 
+  &.academic-work,
+  &.t3d-design,
   &.ui-design {
     height: $bg-section-height;
-    background-image: url('../img/ui-design.png');
     border: {
       top: 1px solid $border-color;
       bottom: 1px solid $border-color;
     }
   }
+
+  &.ui-design {
+    background-image: url('../img/ui-design.png');
+  }
+
+  &.t3d-design {
+    background-image: url('../img/3d-design.png');
+  }
+
+  &.academic-work {
+    background-image: url('../img/academic-work.png');
+  }
+
+
 }
 
 $tile-angle: 60px;
 $tile-offset: 10px;
-$tile-background: #efefef;
+$tile-background: #f8f8f8;
 
 .section-tile {
   position: relative;
@@ -71,5 +90,18 @@ $tile-background: #efefef;
 
   &:hover {
     @extend .col-offset3;
+  }
+
+  &.reversed {
+
+    &:before {
+      border-top: $bg-section-height + $tile-offset*2 solid transparent;
+      border-bottom: none;
+    }
+
+    &:after {
+      border-top: none;
+      border-bottom: $bg-section-height + $tile-offset*2 solid transparent;
+    }
   }
 }

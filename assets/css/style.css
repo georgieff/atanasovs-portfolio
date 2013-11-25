@@ -176,7 +176,7 @@ h1, .h1 {
 }
 
 h2, .h2 {
-  margin: 0 0 45px;
+  margin: 10px 0 45px;
   font: 500 36px/0.91 "Roboto", "Segoe UI", Arial, Helvetica, sans-serif;
   letter-spacing: -0.05em;
 }
@@ -405,6 +405,9 @@ textarea {
 .section {
   padding: 100px 0;
 }
+.section.light {
+  background: #f8f8f8;
+}
 .section.title-container {
   height: 140px;
   line-height: 140px;
@@ -414,11 +417,19 @@ textarea {
   height: 460px;
   background-image: url("../img/banner.png");
 }
-.section.ui-design {
+.section.academic-work, .section.t3d-design, .section.ui-design {
   height: 590px;
-  background-image: url("../img/ui-design.png");
   border-top: 1px solid #dedede;
   border-bottom: 1px solid #dedede;
+}
+.section.ui-design {
+  background-image: url("../img/ui-design.png");
+}
+.section.t3d-design {
+  background-image: url("../img/3d-design.png");
+}
+.section.academic-work {
+  background-image: url("../img/academic-work.png");
 }
 
 .section-tile {
@@ -429,7 +440,7 @@ textarea {
   margin-bottom: -110px;
   padding-top: 110px;
   padding-bottom: 110px;
-  background: #efefef;
+  background: #f8f8f8;
   transition: margin 0.5s ease;
   -webkit-transform: translateZ(0);
 }
@@ -440,7 +451,7 @@ textarea {
   width: 0;
   height: 0;
   border-bottom: 610px solid transparent;
-  border-right: 60px solid #efefef;
+  border-right: 60px solid #f8f8f8;
   content: "";
 }
 .section-tile:after {
@@ -450,8 +461,16 @@ textarea {
   width: 0;
   height: 0;
   border-top: 610px solid transparent;
-  border-left: 60px solid #efefef;
+  border-left: 60px solid #f8f8f8;
   content: "";
+}
+.section-tile.reversed:before {
+  border-top: 610px solid transparent;
+  border-bottom: none;
+}
+.section-tile.reversed:after {
+  border-top: none;
+  border-bottom: 610px solid transparent;
 }
 
 img.circle {
@@ -515,6 +534,8 @@ img.circle {
   background: #7dd9b3;
   border-radius: 4px;
   box-shadow: 0 2px 0 #82b6a0;
+  transition: background 0.5s ease;
+  -webkit-transform: translateZ(0);
 }
 .button:hover {
   text-decoration: none;
@@ -530,13 +551,34 @@ p + .button {
   margin-top: 50px;
 }
 
+table {
+  color: #8e8e8e;
+  font: 500 14px/60px "Roboto", Arial, Helvetica, sans-serif;
+  cellspacing: 0;
+  cellpadding: 0;
+}
+table tr {
+  background: #fff;
+  border-bottom: 1px solid #eee;
+}
+table tr:nth-child(even) {
+  background: #fbfbfb;
+}
+table td {
+  height: 60px;
+  padding: 0 50px;
+}
+table thead tr {
+  background: #ddd;
+}
+
 #mod .mtac {
   text-align: center;
 }
 #mod .mtal {
   text-align: left;
 }
-#mod .mtar {
+#mod .mtar, #mod table tr td:last-child, table tr #mod td:last-child {
   text-align: right;
 }
 #mod .mnp {
@@ -568,4 +610,19 @@ p + .button {
 }
 #mod .mmb5 {
   margin-bottom: 50px;
+}
+#mod .mpb1 {
+  padding-bottom: 10px;
+}
+#mod .mpb2 {
+  padding-bottom: 20px;
+}
+#mod .mpb3 {
+  padding-bottom: 30px;
+}
+#mod .mpb4 {
+  padding-bottom: 40px;
+}
+#mod .mpb5 {
+  padding-bottom: 50px;
 }
