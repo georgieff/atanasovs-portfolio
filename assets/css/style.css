@@ -192,12 +192,13 @@ h4, .h4 {
   font: 300 24px "Roboto", "Segoe UI", Arial, Helvetica, sans-serif;
 }
 
-h5, .h5 {
+h5, .tags > span,
+.tag, .h5 {
   margin: 0 0 10px;
-  font: 300 16px "Roboto", "Segoe UI", Arial, Helvetica, sans-serif;
+  font: 500 16px "Roboto", "Segoe UI", Arial, Helvetica, sans-serif;
 }
 
-h6, .navigation ul a, .h6 {
+h6, .navigation ul a, .button, .h6 {
   margin: 0 0 10px;
   font: 700 14px/2 "Roboto", "Segoe UI", Arial, Helvetica, sans-serif;
   text-transform: uppercase;
@@ -361,7 +362,7 @@ textarea {
   margin-left: 16.66667%;
 }
 
-.col-offset3 {
+.col-offset3, .section-tile:hover {
   margin-left: 25%;
 }
 
@@ -423,12 +424,14 @@ textarea {
 .section-tile {
   position: relative;
   width: 400px;
-  height: 630px;
-  margin-top: -120px;
-  margin-bottom: -120px;
-  padding-top: 120px;
-  padding-bottom: 120px;
+  height: 610px;
+  margin-top: -110px;
+  margin-bottom: -110px;
+  padding-top: 110px;
+  padding-bottom: 110px;
   background: #fff;
+  transition: margin 0.5s ease;
+  -webkit-transform: translateZ(0);
 }
 .section-tile:before {
   position: absolute;
@@ -436,7 +439,7 @@ textarea {
   left: -60px;
   width: 0;
   height: 0;
-  border-bottom: 630px solid transparent;
+  border-bottom: 610px solid transparent;
   border-right: 60px solid white;
   content: "";
 }
@@ -446,7 +449,7 @@ textarea {
   right: -60px;
   width: 0;
   height: 0;
-  border-top: 630px solid transparent;
+  border-top: 610px solid transparent;
   border-left: 60px solid white;
   content: "";
 }
@@ -486,6 +489,45 @@ img.circle {
 }
 .navigation ul a.current {
   border-bottom: 3px solid #dedede;
+}
+
+.tags > span,
+.tag {
+  display: inline-block;
+  margin-right: 5px;
+  background: #e1e1e1;
+  border-radius: 10px;
+  line-height: 30px;
+  padding: 0 10px;
+  color: #9d9d9d;
+}
+
+.tags {
+  margin-bottom: 20px;
+}
+
+.button {
+  position: relative;
+  display: inline-block;
+  padding: 0 30px;
+  line-height: 40px;
+  color: #fff;
+  background: #7dd9b3;
+  border-radius: 4px;
+  box-shadow: 0 2px 0 #82b6a0;
+}
+.button:hover {
+  text-decoration: none;
+  color: #fff;
+  background: #56cd9c;
+}
+.button:active {
+  top: 2px;
+  box-shadow: none;
+}
+
+p + .button {
+  margin-top: 50px;
 }
 
 .mtac {

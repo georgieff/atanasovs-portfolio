@@ -28,20 +28,23 @@ $bg-section-height: 590px;
 }
 
 $tile-angle: 60px;
+$tile-offset: 10px;
 
 .section-tile {
   position: relative;
   width: 400px;
-  height: $bg-section-height + 40;
+  height: $bg-section-height + $tile-offset*2;
   margin: {
-    top: -$section-padding - 20;
-    bottom: -$section-padding - 20;
+    top: -$section-padding - $tile-offset;
+    bottom: -$section-padding - $tile-offset;
   }
   padding: {
-    top: $section-padding + 20;
-    bottom: $section-padding + 20;
+    top: $section-padding + $tile-offset;
+    bottom: $section-padding + $tile-offset;
   }
   background: #fff;
+  transition: margin 0.5s ease;
+  -webkit-transform: translateZ(0);
 
   &:before {
     position: absolute;
@@ -49,7 +52,7 @@ $tile-angle: 60px;
     left: -$tile-angle;
     width: 0;
     height: 0;
-    border-bottom: $bg-section-height + 40 solid transparent;
+    border-bottom: $bg-section-height + $tile-offset*2 solid transparent;
     border-right: $tile-angle solid #fff;
     content: "";
   }
@@ -60,8 +63,12 @@ $tile-angle: 60px;
     right: -$tile-angle;
     width: 0;
     height: 0;
-    border-top: $bg-section-height + 40 solid transparent;
+    border-top: $bg-section-height + $tile-offset*2 solid transparent;
     border-left: $tile-angle solid #fff;
     content: "";
+  }
+
+  &:hover {
+    @extend .col-offset3;
   }
 }
