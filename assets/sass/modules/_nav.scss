@@ -1,10 +1,27 @@
 $navigation-height: 60px;
 
-.navigation {
+.navigation-container {
   height: $navigation-height;
   margin-top: -$navigation-height;
+}
+.navigation {
+  height: $navigation-height;
   background: $base-alpha-color;
   z-index: 15;
+  transition: background 0.5s ease;
+  -webkit-transform: translateZ(0);
+
+  &.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: $second-alpha-color;
+
+    ul a.current {
+      border-color: darken($border-color, 20%);
+    }
+  }
 
   ul {
     @extend %list-reset;
@@ -18,19 +35,28 @@ $navigation-height: 60px;
 
     a {
       @extend h6;
+      @extend %bs-border-box;
       display: block;
       margin: 0;
+      height: $navigation-height;
       padding: 0;
       line-height: $navigation-height;
       color: #7a7a7a;
+      transition: border 0.5s ease;
+      -webkit-transform: translateZ(0);
 
       &:hover {
         text-decoration: none;
         background: darken($base-alpha-color, 10%);
       }
 
+      &:focus {
+        outline: darken($border-color, 20%);
+        text-decoration: none;
+      }
+
       &.current {
-        border-bottom: 3px solid $border-color;
+        border-bottom: 5px solid $border-color;
       }
     }
   }

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Document</title>
+  <title>Atanasov's portfolio</title>
   <link href='http://fonts.googleapis.com/css?family=Roboto:500,300,700' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
@@ -14,29 +14,31 @@
       and I love to create great UX/UI
     </h3>
   </section>
-  <section class="navigation">
-    <nav class="cont">
-      <ul>
-        <li>
-          <a href="#" class="current">Timeline</a>
-        </li>
-        <li>
-          <a href="#">Skills & Experience</a>
-        </li>
-        <li>
-          <a href="#">Portfolio</a>
-        </li>
-        <li>
-          <a href="#">Awards & Certs</a>
-        </li>
-        <li>
-          <a href="#">Contacts</a>
-        </li>
-      </ul>
-    </nav>
+  <section class="navigation-container">
+    <div class="navigation">
+      <nav class="cont">
+        <ul>
+          <li>
+            <a href="#Timeline" class="current">Timeline</a>
+          </li>
+          <li>
+            <a href="#SkillsExperience">Skills & Experience</a>
+          </li>
+          <li>
+            <a href="/portfolio">Portfolio</a>
+          </li>
+          <li>
+            <a href="#Awards">Awards & Certs</a>
+          </li>
+          <li>
+            <a href="#Contact">Contacts</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
   </section>
   <section class="section title-container">
-    <h1>Timeline</h1>
+    <h1 id="Timeline">Timeline</h1>
   </section>
   <section class="section mnp">
     <div class="cont">
@@ -47,7 +49,7 @@
   </section>
 
   <section class="section title-container">
-    <h1>Skills & Experience</h1>
+    <h1 id="SkillsExperience">Skills & Experience</h1>
   </section>
 
   <section class="section ui-design">
@@ -137,7 +139,7 @@
   </section>
 
   <section class="section title-container">
-    <h1>Awards & Certs</h1>
+    <h1 id="Awards">Awards & Certs</h1>
   </section>
 
   <section class="section academic-work">
@@ -210,5 +212,79 @@
     </div>
   </section>
 
+  <section class="section title-container">
+    <h1 id="Contact">Contact</h1>
+  </section>
+
+  <section class="section light">
+    <div class="cont">
+      <div class="row">
+        <div class="col6">
+          <img src="http://lorempixel.com/480/460/" alt="random pic">
+        </div>
+        <div class="col6">
+          <h2>Contact me</h2>
+          <div class="tags">
+            <span>Lorem.</span>
+            <span>Natus</span>
+            <span>Accusantium</span>
+            <span>Nobis</span>
+            <span>Fuga</span>
+            <span>Kuifa</span>
+            <span>Shitak</span>
+          </div>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi maiores rem recusandae quasi aut ratione enim architecto vero porro quaerat!</p>
+          <a class="button" href="#">View project</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+  <script>
+  $(function() {
+    var $navigation = $('.navigation'),
+        navPostion = $navigation.offset().top,
+        navTopOffset = 100,
+        getKeyPositions = function () {
+          var ids = {};
+          $('.navigation a').each(function(){
+            elementHref = $(this).attr('href');
+            if(elementHref.charAt(0) === '#') {
+              ids[elementHref] = $(elementHref).offset().top;
+            }
+          })
+          return ids;
+        },
+        keyPositions = getKeyPositions(),
+        checkPositions = function () {
+          var scrollPosition = $(document).scrollTop();
+          if( !$navigation.hasClass('sticky') && scrollPosition >= navPostion) {
+            $navigation.addClass('sticky');
+          } else if ( $navigation.hasClass('sticky') && scrollPosition < navPostion) {
+            $navigation.removeClass('sticky');
+          }
+          $.each( keyPositions, function( point, position ) {
+            if(scrollPosition > position - navTopOffset) {
+              $('.current').removeClass('current');
+              $('a[href=' + point + ']').addClass('current');
+            }
+          });
+        };
+
+    checkPositions();
+    $(window).scroll(function() {
+      checkPositions();
+    });
+
+    $('.navigation').on('click', 'a[href^=#]', function(e){
+      e.preventDefault();
+      history.replaceState(null, '', $(this).attr('href'));
+      $("html, body").animate({
+        scrollTop: $($(this).attr('href')).offset().top - navTopOffset + 1
+      }, 1000);
+    });
+  });
+  </script>
 </body>
 </html>
