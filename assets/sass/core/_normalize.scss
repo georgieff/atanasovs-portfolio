@@ -114,6 +114,8 @@ img {
 p, ul, ol, dl, form, fieldset, small {
   margin: 8px 0 20px;
   padding: 0;
+  font-size: 20px;
+  font-weight:300;
 }
 
 ul, ol {
@@ -139,19 +141,20 @@ dd {
 h1, .h1 {
   margin: 0 0 40px;
   font: 500 24px $font-family-1;
-  letter-spacing: -0.05em;
 }
 
 h2, .h2 {
-  margin: 10px 0 45px;
+  margin: 10px 0 40px;
   font: 500 36px / 0.91 $font-family-1;
-  letter-spacing: -0.05em;
+}
+
+.inline-header{
+  margin-left:40px;
 }
 
 h3, .h3 {
   margin: 0 0 20px;
-  font: 300 22px / 1.2 $font-family-1;
-  letter-spacing: -0.05em;
+  font: 300 24px / 1.2 $font-family-1;
 }
 
 h4, .h4 {
