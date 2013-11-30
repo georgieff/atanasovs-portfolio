@@ -217,40 +217,42 @@ h2, .h2 {
 /* line 151, ../sass/core/_normalize.scss */
 .inline-header {
   margin-left: 40px;
+  margin-bottom: 20px;
+  margin-top: 30px;
 }
 
-/* line 155, ../sass/core/_normalize.scss */
+/* line 157, ../sass/core/_normalize.scss */
 h3, .h3 {
   margin: 0 0 20px;
   font: 300 24px/1.2 "Roboto", "Segoe UI", Arial, Helvetica, sans-serif;
 }
 
-/* line 160, ../sass/core/_normalize.scss */
+/* line 162, ../sass/core/_normalize.scss */
 h4, .h4 {
   margin: 0 0 20px;
   font: 300 24px "Roboto", "Segoe UI", Arial, Helvetica, sans-serif;
 }
 
-/* line 165, ../sass/core/_normalize.scss */
+/* line 167, ../sass/core/_normalize.scss */
 h5, .tags > span,
 .tag, .h5 {
   margin: 0 0 10px;
   font: 500 16px "Roboto", "Segoe UI", Arial, Helvetica, sans-serif;
 }
 
-/* line 170, ../sass/core/_normalize.scss */
-h6, .navigation ul a, .button, .h6 {
+/* line 172, ../sass/core/_normalize.scss */
+h6, .navigation ul a, .button, .contact-button, .h6 {
   margin: 0 0 10px;
   font: 700 14px/2 "Roboto", "Segoe UI", Arial, Helvetica, sans-serif;
   text-transform: uppercase;
 }
 
-/* line 176, ../sass/core/_normalize.scss */
+/* line 178, ../sass/core/_normalize.scss */
 .h1, .h2, .h3, .h4, .h5, .h6 {
   display: block;
 }
 
-/* line 180, ../sass/core/_normalize.scss */
+/* line 182, ../sass/core/_normalize.scss */
 table {
   width: 100%;
   border-spacing: 0;
@@ -258,13 +260,13 @@ table {
   background-color: transparent;
 }
 
-/* line 187, ../sass/core/_normalize.scss */
+/* line 189, ../sass/core/_normalize.scss */
 td, th {
   text-align: left;
   vertical-align: top;
 }
 
-/* line 195, ../sass/core/_normalize.scss */
+/* line 197, ../sass/core/_normalize.scss */
 input,
 button,
 select,
@@ -275,7 +277,7 @@ textarea {
   font-family: inherit;
 }
 
-/* line 205, ../sass/core/_normalize.scss */
+/* line 207, ../sass/core/_normalize.scss */
 button,
 input[type="button"],
 input[type="reset"],
@@ -292,20 +294,20 @@ input[type="submit"] {
   overflow: visible;
 }
 
-/* line 216, ../sass/core/_normalize.scss */
+/* line 218, ../sass/core/_normalize.scss */
 input[disabled],
 button[disabled] {
   cursor: default;
   opacity: 0.75;
 }
 
-/* line 222, ../sass/core/_normalize.scss */
+/* line 224, ../sass/core/_normalize.scss */
 input[type="radio"],
 input[type="checkbox"] {
   padding: 0;
   line-height: normal;
 }
-/* line 228, ../sass/core/_normalize.scss */
+/* line 230, ../sass/core/_normalize.scss */
 input[type="radio"]:focus,
 input[type="checkbox"]:focus {
   outline: thin dotted #333333;
@@ -313,14 +315,14 @@ input[type="checkbox"]:focus {
   outline-offset: -2px;
 }
 
-/* line 236, ../sass/core/_normalize.scss */
+/* line 238, ../sass/core/_normalize.scss */
 button::-moz-focus-inner,
 input::-moz-focus-inner {
   padding: 0;
   border: 0;
 }
 
-/* line 241, ../sass/core/_normalize.scss */
+/* line 243, ../sass/core/_normalize.scss */
 textarea {
   overflow: auto;
   vertical-align: top;
@@ -512,34 +514,38 @@ textarea {
   padding: 30px 0 60px 0;
 }
 /* line 33, ../sass/modules/_sections.scss */
+.section.contacts-container {
+  padding-top: 40px;
+}
+/* line 37, ../sass/modules/_sections.scss */
 .section.banner {
   height: 460px;
   background-image: url("../img/banner.png");
 }
-/* line 40, ../sass/modules/_sections.scss */
+/* line 44, ../sass/modules/_sections.scss */
 .section.academic-work, .section.t3d-design, .section.ui-design {
   height: 600px;
 }
-/* line 44, ../sass/modules/_sections.scss */
+/* line 48, ../sass/modules/_sections.scss */
 .section.ui-design {
   background-image: url("../img/ui-design.png");
 }
-/* line 48, ../sass/modules/_sections.scss */
+/* line 52, ../sass/modules/_sections.scss */
 .section.t3d-design {
   background-image: url("../img/3d-design.png");
 }
-/* line 52, ../sass/modules/_sections.scss */
+/* line 56, ../sass/modules/_sections.scss */
 .section.academic-work {
   background-image: url("../img/academic-work.png");
 }
 
-/* line 63, ../sass/modules/_sections.scss */
+/* line 67, ../sass/modules/_sections.scss */
 .section-tile {
   padding-left: 40px;
   padding-right: 25px;
 }
 
-/* line 70, ../sass/modules/_sections.scss */
+/* line 74, ../sass/modules/_sections.scss */
 .section-tilt-tile {
   position: relative;
   width: 430px;
@@ -555,7 +561,7 @@ textarea {
   transition: margin 0.5s ease;
   -webkit-transform: translateZ(0);
 }
-/* line 90, ../sass/modules/_sections.scss */
+/* line 94, ../sass/modules/_sections.scss */
 .section-tilt-tile:before {
   position: absolute;
   top: 0;
@@ -566,7 +572,7 @@ textarea {
   border-right: 150px solid #f8f8f8;
   content: "";
 }
-/* line 101, ../sass/modules/_sections.scss */
+/* line 105, ../sass/modules/_sections.scss */
 .section-tilt-tile:after {
   position: absolute;
   top: 0;
@@ -577,16 +583,16 @@ textarea {
   border-left: 150px solid #f8f8f8;
   content: "";
 }
-/* line 112, ../sass/modules/_sections.scss */
+/* line 116, ../sass/modules/_sections.scss */
 .section-tilt-tile:hover {
   /* @extend .col-offset3;*/
 }
-/* line 118, ../sass/modules/_sections.scss */
+/* line 122, ../sass/modules/_sections.scss */
 .section-tilt-tile.reversed:before {
   border-top: 620px solid transparent;
   border-bottom: none;
 }
-/* line 123, ../sass/modules/_sections.scss */
+/* line 127, ../sass/modules/_sections.scss */
 .section-tilt-tile.reversed:after {
   border-top: none;
   border-bottom: 620px solid transparent;
@@ -716,6 +722,47 @@ p + .button {
   margin-top: 50px;
 }
 
+/* line 29, ../sass/modules/_buttons.scss */
+.contact-button {
+  position: relative;
+  display: inline-block;
+  height: 80px;
+  width: 80px;
+  color: #fff;
+  background: #7dd9b3;
+  border-radius: 40px;
+  box-shadow: 0 2px 0 #82b6a0;
+  margin: 0 5px;
+  transition: background 0.5s ease;
+  -webkit-transform: translateZ(0);
+}
+/* line 43, ../sass/modules/_buttons.scss */
+.contact-button.email {
+  background: #1bce99;
+  box-shadow: 0 2px 0 #1cbe8e;
+}
+/* line 48, ../sass/modules/_buttons.scss */
+.contact-button.dribbble {
+  background: #f85993;
+  box-shadow: 0 2px 0 #e74a83;
+}
+/* line 53, ../sass/modules/_buttons.scss */
+.contact-button:hover {
+  text-decoration: none;
+  color: #fff;
+  background: #56cd9c;
+}
+/* line 58, ../sass/modules/_buttons.scss */
+.contact-button:active {
+  top: 2px;
+  box-shadow: none;
+}
+
+/* line 64, ../sass/modules/_buttons.scss */
+p + .button {
+  margin-top: 50px;
+}
+
 /* line 1, ../sass/modules/_tables.scss */
 table {
   color: #8e8e8e;
@@ -739,7 +786,16 @@ table td {
 }
 /* line 25, ../sass/modules/_tables.scss */
 table thead tr {
-  background: #ddd;
+  border-bottom: 2px solid #ddd;
+  background: none;
+  color: #363636;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+/* line 32, ../sass/modules/_tables.scss */
+table thead tr td {
+  line-height: 30px;
+  height: 30px;
 }
 
 /* line 3, ../sass/core/_modifiers.scss */

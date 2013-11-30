@@ -30,6 +30,10 @@ $bg-section-height: 600px;
     padding: 30px 0 60px 0;
   }
 
+  &.contacts-container{
+    padding-top: 40px;
+  }
+
   &.banner {
     height: 460px;
     background-image: url('../img/banner.png');

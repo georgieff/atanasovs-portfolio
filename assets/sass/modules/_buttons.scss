@@ -25,3 +25,43 @@
 p + .button {
   margin-top: 50px;
 }
+
+.contact-button {
+  @extend h6;
+  position: relative;
+  display: inline-block;
+  height: 80px;
+  width: 80px;
+  color: #fff;
+  background: #7dd9b3;
+  border-radius: 40px;
+  box-shadow: 0 2px 0 #82b6a0;
+  margin: 0 5px;
+  transition: background 0.5s ease;
+  -webkit-transform: translateZ(0);
+  
+  &.email {
+    background: #1bce99;
+    box-shadow: 0 2px 0 #1cbe8e;
+  }
+
+  &.dribbble {
+    background: #f85993;
+    box-shadow: 0 2px 0 #e74a83;
+  }
+
+  &:hover {
+    text-decoration: none;
+    color: #fff;
+    background: darken(#7dd9b3, 10%);
+  }
+  &:active {
+    top: 2px;
+    box-shadow: none;
+  }
+}
+
+p + .button {
+  margin-top: 50px;
+}
+
