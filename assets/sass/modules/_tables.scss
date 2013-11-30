@@ -23,6 +23,16 @@ table {
   }
 
   thead tr{
-    background: #ddd;
+    border-bottom: 2px solid #ddd;
+    background: none;
+    color: #363636;
+    text-transform: uppercase;
+    font-weight: 700;
+
+  td {
+    line-height: 30px;
+    height:30px;
+  }
+
   }
 }
