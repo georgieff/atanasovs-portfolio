@@ -1,5 +1,5 @@
 $section-padding: 100px;
-$bg-section-height: 590px;
+$bg-section-height: 600px;
 
 .section {
   @extend %bs-border-box;
@@ -12,8 +12,22 @@ $bg-section-height: 590px;
 
   &.title-container {
     height: 140px;
-    line-height: 140px;
     text-align: center;
+    padding: 60px 0 0 0;
+  }
+
+  &.timeline-title-container {
+    height: 160px;
+    text-align: center;
+    padding: 80px 0 0 0;
+  }
+
+  &.table-container{
+    padding: 30px 0 0 0;
+  }
+
+  &.last-table-container{
+    padding: 30px 0 60px 0;
   }
 
   &.banner {
@@ -25,10 +39,6 @@ $bg-section-height: 590px;
   &.t3d-design,
   &.ui-design {
     height: $bg-section-height;
-    border: {
-      top: 1px solid $border-color;
-      bottom: 1px solid $border-color;
-    }
   }
 
   &.ui-design {
@@ -46,21 +56,32 @@ $bg-section-height: 590px;
 
 }
 
-$tile-angle: 60px;
+$tile-angle: 150px;
 $tile-offset: 10px;
 $tile-background: #f8f8f8;
 
-.section-tile {
+.section-tile{
+  padding: {
+    left: 40px;
+    right: 25px;
+  }
+}
+
+.section-tilt-tile {
   position: relative;
-  width: 400px;
+  width: 430px;
   height: $bg-section-height + $tile-offset*2;
   margin: {
     top: -$section-padding - $tile-offset;
     bottom: -$section-padding - $tile-offset;
+    left: 15px;
   }
   padding: {
     top: $section-padding + $tile-offset;
     bottom: $section-padding + $tile-offset;
+    left: 25px;
+    right: 25px;
+
   }
   background: $tile-background;
   transition: margin 0.5s ease;
@@ -89,7 +110,7 @@ $tile-background: #f8f8f8;
   }
 
   &:hover {
-    @extend .col-offset3;
+   /* @extend .col-offset3;*/
   }
 
   &.reversed {
